@@ -1,0 +1,32 @@
+<div class="home-container">
+    <div class="top-header">
+        <div class="title">Now Playing Movies</div>
+        <div class="pageStatus">{{currentPage}}/{{totalPages}}</div>
+        <div class="browse-page-btns">
+            <button (click)="goPrevPage()">Prev</button>
+            <button (click)="goNextPage()">Next</button>
+        </div>
+    </div>
+
+    <div class="movie-list-container">
+        <div class="movie-container" *ngFor="let movie of nowPlaying">
+            <div class="poster-image">
+                <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
+            </div>
+            <div class="movie-content">
+                <div class="top">
+                    <div class="vote-score">
+                        <div><span>{{movie.vote_average*10}}<sup>%</sup></span></div>
+                    </div>
+                    <div class="header-section">
+                        <h4>{{movie.title}}</h4>
+                        <h5>{{movie.release_date}}</h5>
+                    </div>
+                </div>
+                <p>{{movie.overview}}</p>
+                <div class="info-btn"><a [routerLink]="['/movie-details', movie.id]">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
