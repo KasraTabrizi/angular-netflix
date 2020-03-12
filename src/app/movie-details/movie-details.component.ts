@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpService } from '../http.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,15 +9,40 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
   id: number;
+  movieDetails: Object;
+  movieCredits: Object;
+  movieVideos: Object;
   private sub: any;
+
   constructor(private _http: HttpService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.id = +params['id']; // (+) converts string 'id' to a number
+    });
 
-      // In a real app: dispatch action to load the details here.
+    this._http.getMovieDetails(this.id).subscribe(data => {
+      this.movieDetails = data;
+      console.log(this.movieDetails);
+    });
+
+    this._http.getMovieCredits(this.id).subscribe(data => {
+      this.movieCredits = data;
+      console.log(this.movieCredits);
+    });
+
+    this._http.getMovieVideos(this.id).subscribe(data => {
+      this.movieVideos = data;
+      console.log(this.movieVideos);
     });
   }
 
+  getImage() {
+    let imageUrl = `https://image.tmdb.org/t/p/original/${this.movieDetails["backdrop_path"]}`;
+    return `url(${imageUrl})`;
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }
