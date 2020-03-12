@@ -2,12 +2,24 @@
     <div class="poster-bg" [ngStyle]="{'background-image': getImage()}">
         <div class="main-content-with-overlay">
             <div class="image-container">
-                <img src="http://image.tmdb.org/t/p/w185/{{movieDetails.poster_path}}" alt="">
+                <img src="http://image.tmdb.org/t/p/original/{{movieDetails['poster_path']}}" alt="">
             </div>
             <div class="content-right-container">
-
+                <div class="header-section">
+                    <h2>{{movieDetails["title"]}} <span>({{movieDetails["release_date"] | date:'yyyy'}})</span></h2>
+                </div>
+                <div class="options-container">
+                    <div><span>{{movieDetails["vote_average"]*10}}<sup>%</sup></span></div>
+                    <button mat-raised-button matTooltip="Mark as Favorite" class="user-btn"><img src=""
+                            alt=""></button>
+                    <button mat-raised-button matTooltip="Add to your watchlist" class="user-btn"><img src=""
+                            alt=""></button>
+                    <button mat-raised-button matTooltip="Rate it!" class="user-btn"><img src="" alt=""></button>
+                    <button mat-raised-button matTooltip="Play Trailer" class="user-btn"><img src="" alt=""></button>
+                </div>
+                <h3>Overview</h3>
+                <p>{{movieDetails["overview"]}}</p>
             </div>
         </div>
     </div>
-
 </div>

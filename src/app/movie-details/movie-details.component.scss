@@ -15,11 +15,60 @@
         //background-position: center 0;
 
         .main-content-with-overlay{
-            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 600px;
             width: 100%;
             background-size: cover;
-            background-image: radial-gradient(circle at 20% 50%, rgba(16.47%, 32.16%, 74.51%, 0.98) 0%, rgba(27.06%, 40.78%, 78.04%, 0.88) 100%);
+            background-image: radial-gradient(circle at 20% 50%, rgba(68, 99, 184, 0.98) 0%, rgba(27.06%, 40.78%, 78.04%, 0.88) 100%);
+
+            .image-container{
+                //border: 1px solid black;
+                // width: 200px;
+                // height: 400px;
+                img{
+                    width: 300px;
+                }
+            }
+
+            .content-right-container{
+                color: #fff;
+                //border: 1px solid black;
+                padding: 0 1.5em;
+                width: 45%;
+                height: 75%;
+                //background-color: white;
+                //position: absolute;
+
+                .header-section{
+                    h2{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 2em;
+
+                        span{
+                            font-size: 0.7em;
+                            opacity: 0.7;
+                            font-weight: 400;
+                        }
+                    }
+                    
+                }
+
+                .options-container{
+
+                    display: flex;
+                    margin: 0 20px;
+
+                    button{
+                        display: block;
+                        margin: 0 20px;
+                    }
+                }
+            }
         }
+
+        
     }
 }

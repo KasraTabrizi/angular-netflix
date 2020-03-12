@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpService } from '../http.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-movie-details',
@@ -9,10 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
   id: number;
+  private sub: any;
   movieDetails: Object;
   movieCredits: Object;
   movieVideos: Object;
-  private sub: any;
 
   constructor(private _http: HttpService, private route: ActivatedRoute) { }
 
