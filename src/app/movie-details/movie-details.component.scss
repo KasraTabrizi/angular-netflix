@@ -7,7 +7,7 @@
     margin-top: 50px;
     width: 100%;
     .poster-bg{
-        height: 700px;
+        height: 600px;
         //width: 100%;
         //border: 1px solid black;
         background-repeat: no-repeat;
@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 700px;
+            height: 600px;
             width: 100%;
             background-size: cover;
             background-image: radial-gradient(circle at 20% 50%, rgba(68, 99, 184, 0.98) 0%, rgba(27.06%, 40.78%, 78.04%, 0.88) 100%);
@@ -156,7 +156,7 @@
                     .filtered-cast{
                         border: 1px solid rgba(0, 0, 0, 0.3);
                         width: 150px;
-                        height: 340px;
+                        height: 300px;
                         -webkit-box-shadow: 0px 3px 5px 0px rgba(176,169,176,1);
                         -moz-box-shadow: 0px 3px 5px 0px rgba(176,169,176,1);
                         box-shadow: 0px 3px 5px 0px rgba(176,169,176,1);
