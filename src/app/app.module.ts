@@ -9,12 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MovieTrailerComponent } from './movie-details/movie-trailer/movie-trailer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieTrailerComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

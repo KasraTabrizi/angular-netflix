@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpService } from '../http.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MovieTrailerComponent } from './movie-trailer/movie-trailer.component';
 
 @Component({
   selector: 'app-movie-details',
@@ -15,7 +17,7 @@ export class MovieDetailsComponent implements OnInit {
   movieCredits: Object;
   movieVideos: Object;
 
-  constructor(private _http: HttpService, private route: ActivatedRoute) { }
+  constructor(private _http: HttpService, private route: ActivatedRoute, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
@@ -46,4 +48,18 @@ export class MovieDetailsComponent implements OnInit {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
+
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(MovieTrailerComponent, {
+      width: '250px',
+      data: { name: "test" }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
 }

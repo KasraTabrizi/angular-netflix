@@ -18,7 +18,7 @@
                             src="https://img.icons8.com/material-rounded/16/ffffff/bookmark-ribbon.png" /></button>
                     <button mat-raised-button matTooltip="Rate it!" class="user-btn"><img
                             src="https://img.icons8.com/material-rounded/16/ffffff/star.png" /></button>
-                    <button mat-raised-button matTooltip="Play Trailer" class="user-btn"><img
+                    <button mat-raised-button matTooltip="Play Trailer" class="user-btn" (click)="openDialog()"><img
                             src="https://img.icons8.com/android/16/ffffff/play.png" /></button>
                 </div>
                 <h3>Overview</h3>
@@ -56,6 +56,9 @@
                             </div>
                         </ng-template>
                     </div>
+                </div>
+                <div class="link">
+                    <a href="">Full Cast & Crew</a>
                 </div>
             </div>
         </div>

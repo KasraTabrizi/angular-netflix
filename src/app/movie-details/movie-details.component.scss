@@ -138,21 +138,26 @@
     .main-content{
         display: grid;
         grid-template-columns: 4fr 1fr;
-
+        // display: flex;
+        // justify-content: center;
+        // width: 100%;
         .left-container{
             border: 1px solid black;
-
+            padding-left: 150px;
             .cast-container{
                 margin: 20px 100px;
+                padding: 50px 0;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+                //width: 55%;
                 h3{
-                    font-size: 1.1em;
+                    font-size: 1.3em;
                     font-weight: 700;
                 }
 
                 .top-cast-container{
-                    //border:1px solid black;
                     display: grid;
                     grid-template-columns: repeat(5,1fr);
+                    margin-bottom: 20px;
                     .filtered-cast{
                         border: 1px solid rgba(0, 0, 0, 0.3);
                         width: 150px;
@@ -180,6 +185,14 @@
                 }
             }
 
+            .link{
+                a{
+                    text-decoration: none;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
             
         }
 
