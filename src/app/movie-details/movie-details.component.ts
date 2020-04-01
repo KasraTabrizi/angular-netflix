@@ -52,7 +52,7 @@ export class MovieDetailsComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MovieTrailerComponent, {
-      width: '250px',
+      width: '850px',
       data: { name: "test" }
     });
 

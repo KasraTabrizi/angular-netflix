@@ -1,2 +1,8 @@
-<p>movie-trailer works!</p>
-<button (click)="onCloseClick()">Close</button>
+<p>TRAILER</p>
+<video controls width="800">
+    <source [src]="trailerURL | safe">
+</video>
+<!-- <iframe [src]="trailerURL | safe" frameborder="0"></iframe> -->
+<div>
+    <button (click)="onCloseClick()">Close</button>
+</div>

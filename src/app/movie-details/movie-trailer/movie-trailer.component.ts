@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -8,8 +8,11 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class MovieTrailerComponent implements OnInit {
 
-  constructor(
-    public dialogRef: MatDialogRef<MovieTrailerComponent>) { }
+  trailerURL: String = "https://www.themoviedb.org/video/play?key=F95Fk255I4M";
+
+  //trailerURL: String = "https://www.youtube.com/embed?v=oC_XEbF3n2M";
+
+  constructor(public dialogRef: MatDialogRef<MovieTrailerComponent>) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +20,4 @@ export class MovieTrailerComponent implements OnInit {
   onCloseClick(): void {
     this.dialogRef.close();
   }
-
 }

@@ -11,13 +11,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MovieTrailerComponent } from './movie-details/movie-trailer/movie-trailer.component';
+import { SafePipe } from './safe.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MovieDetailsComponent,
-    MovieTrailerComponent
+    MovieTrailerComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
