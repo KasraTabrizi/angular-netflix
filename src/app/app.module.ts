@@ -14,6 +14,7 @@ import { MovieTrailerComponent } from './movie-details/movie-trailer/movie-trail
 import { SafePipe } from './safe.pipe';
 import { MyTimePipe } from './my-time.pipe';
 import * as _ from 'lodash';
+import { SearchDetailsComponent } from './search-details/search-details.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import * as _ from 'lodash';
     MovieDetailsComponent,
     MovieTrailerComponent,
     SafePipe,
-    MyTimePipe
+    MyTimePipe,
+    SearchDetailsComponent
   ],
   imports: [
     BrowserModule,
