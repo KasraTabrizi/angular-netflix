@@ -39,7 +39,7 @@ export class MovieDetailsComponent implements OnInit {
       console.log(this.movieVideos);
     });
 
-    this.
+
   }
 
   getImage() {
