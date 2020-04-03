@@ -67,13 +67,15 @@
                 <div class="link">
                     <a href="">Full Cast & Crew</a>
                 </div>
-                <h3>Social - <span>Reviews: {{movieReviews['results'].length}}</span></h3>
                 <div class="social-container">
-                    <h4>A review by {{movieReviews['results'][0].author}}</h4>
-                    <p>{{truncateFirstMovieReviewContent()}} <a href="">read the rest</a></p>
-                </div>
-                <div class="link">
-                    <a href="">Read All Reviews</a>
+                    <h3>Social - <span>Reviews: {{movieReviews['results'].length}}</span></h3>
+                    <div class="review-section">
+                        <h4>A review by {{movieReviews['results'][0].author}}</h4>
+                        <p>{{truncateFirstMovieReviewContent()}} <a href="">read the rest</a></p>
+                    </div>
+                    <div class="link">
+                        <a href="">Read All Reviews</a>
+                    </div>
                 </div>
             </div>
         </div>
