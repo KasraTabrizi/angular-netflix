@@ -12,7 +12,7 @@ export class MyTimePipe implements PipeTransform {
 
     time = value / 60;
     hour = Math.floor(time);
-    minutes = Math.floor((time - hour) * 60);
+    minutes = Math.round((time - hour) * 60);
 
     return String(hour) + "h " + String(minutes) + "m";
   }
