@@ -8,11 +8,8 @@
     width: 100%;
     .poster-bg{
         height: 600px;
-        //width: 100%;
-        //border: 1px solid black;
         background-repeat: no-repeat;
         background-size: 100%;
-        //background-position: center 0;
 
         .main-content-with-overlay{
             display: flex;
@@ -24,9 +21,6 @@
             background-image: radial-gradient(circle at 20% 50%, rgba(68, 99, 184, 0.98) 0%, rgba(27.06%, 40.78%, 78.04%, 0.88) 100%);
 
             .image-container{
-                //border: 1px solid black;
-                // width: 200px;
-                // height: 400px;
                 img{
                     width: 300px;
                 }
@@ -34,12 +28,9 @@
 
             .content-right-container{
                 color: #fff;
-                //border: 1px solid black;
                 padding: 0 2.5em;
                 width: 45%;
                 height: 75%;
-                //background-color: white;
-                //position: absolute;
 
                 .header-section{
                     h2{
@@ -118,9 +109,6 @@
     .main-content{
         display: grid;
         grid-template-columns: 4fr 1fr;
-        // display: flex;
-        // justify-content: center;
-        // width: 100%;
         .left-container{
             border: 1px solid black;
             padding-left: 150px;
