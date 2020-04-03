@@ -81,6 +81,25 @@
         </div>
         <div class="right-container">
             <h3>Facts</h3>
+            <div class="sub-section">
+                <h4>Status</h4>
+                <p>{{movieDetails['status']}}</p>
+            </div>
+            <div class="sub-section">
+                <h4>Original language</h4>
+                <p>{{movieDetails['original_language']}}</p>
+            </div>
+            <div class="sub-section">
+                <h4>Budget</h4>
+                <p *ngIf="movieDetails['budget'] === 0; else showbudget">
+                    -
+                </p>
+                <ng-template #showbudget>
+                    <p>{{movieDetails['budget'] | currency}}</p>
+                </ng-template>
+            </div>
+
+
         </div>
     </div>
 </div>
