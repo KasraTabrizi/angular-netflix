@@ -12,6 +12,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MovieTrailerComponent } from './movie-details/movie-trailer/movie-trailer.component';
 import { SafePipe } from './safe.pipe';
+import { MyTimePipe } from './my-time.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SafePipe } from './safe.pipe';
     HomeComponent,
     MovieDetailsComponent,
     MovieTrailerComponent,
-    SafePipe
+    SafePipe,
+    MyTimePipe
   ],
   imports: [
     BrowserModule,

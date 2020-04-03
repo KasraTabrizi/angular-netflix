@@ -8,6 +8,19 @@
                 <div class="header-section">
                     <h2>{{movieDetails["title"]}} <span>({{movieDetails["release_date"] | date:'yyyy'}})</span></h2>
                 </div>
+                <div class="sub-header-section">
+                    <h4><span>{{movieDetails["release_date"]}} (US)</span>
+                        -
+                        <span *ngFor="let genre of movieDetails['genres']; index as i">
+                            {{genre.name}}
+                            <ng-template [ngIf]="i < movieDetails['genres'].length - 1">,</ng-template>
+                        </span>
+                        -
+                        <span>
+                            {{movieDetails["runtime"] | myTime}}
+                        </span>
+                    </h4>
+                </div>
                 <div class="options-container">
                     <div class="vote_average">
                         <div>{{movieDetails["vote_average"]*10}}<sup>%</sup></div>
@@ -24,8 +37,10 @@
                 <div class="tagline">
                     <h4><i>{{movieDetails["tagline"]}}</i></h4>
                 </div>
-                <h3>Overview</h3>
-                <p>{{movieDetails["overview"]}}</p>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>{{movieDetails["overview"]}}</p>
+                </div>
             </div>
         </div>
     </div>
