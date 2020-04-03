@@ -25,8 +25,8 @@ export class HttpService {
     return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${this.apiKey}&language=en-US`);
   }
 
-  searchMovie(searchQuery) {
-    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${searchQuery}&page=1&include_adult=false`);
+  searchMovie(searchQuery, currentPage) {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${searchQuery}&page=${currentPage}&include_adult=false`);
   }
 
   getMovieReviews(movieId) {

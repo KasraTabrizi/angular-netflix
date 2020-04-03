@@ -4,7 +4,7 @@
             <h1>Welcome.</h1>
             <h2>Movies, Tv Shows and many more. Go and discover.</h2>
             <div class="searchbar">
-                <input type="text">
+                <input type="text" [(ngModel)]="query">
                 <button [routerLink]="['/search-details', query]">Search</button>
             </div>
         </div>

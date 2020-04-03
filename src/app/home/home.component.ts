@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   nowPlaying: [];
   currentPage: number = 1;
   totalPages: number = 0;
+  query: String;
   constructor(private _http: HttpService) { }
 
   ngOnInit(): void {
