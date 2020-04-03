@@ -98,7 +98,12 @@
                     <p>{{movieDetails['budget'] | currency}}</p>
                 </ng-template>
             </div>
-
+            <div class="sub-section">
+                <h4>Keywords</h4>
+                <span *ngFor="let keyword of movieKeywords['keywords']">
+                    {{keyword.name}}
+                </span>
+            </div>
 
         </div>
     </div>
