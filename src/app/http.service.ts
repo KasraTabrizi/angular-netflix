@@ -36,4 +36,13 @@ export class HttpService {
   getMovieKeywords(movieId) {
     return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/keywords?api_key=${this.apiKey}&language=en-US`);
   }
+
+  getDetailsOfCast(personId) {
+    return this.http.get(`https://api.themoviedb.org/3/person/${personId}?api_key=${this.apiKey}&language=en-US`);
+  }
+
+  getCreditsOfCast(personId) { //Movies and TV Shows
+    return this.http.get(`https://api.themoviedb.org/3/person/${personId}/combined_credits?api_key=${this.apiKey}&language=en-US`);
+  }
+
 }
