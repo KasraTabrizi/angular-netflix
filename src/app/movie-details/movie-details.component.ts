@@ -16,6 +16,7 @@ export class MovieDetailsComponent implements OnInit {
   movieDetails: Object;
   movieCredits: Object;
   movieVideos: Object;
+  movieReviews: Object;
 
   constructor(private _http: HttpService, private route: ActivatedRoute, public dialog: MatDialog) { }
 
@@ -39,7 +40,10 @@ export class MovieDetailsComponent implements OnInit {
       console.log(this.movieVideos);
     });
 
-
+    this._http.getMovieReviews(this.id).subscribe(data => {
+      this.movieReviews = data;
+      console.log(this.movieReviews);
+    });
   }
 
   getImage() {
