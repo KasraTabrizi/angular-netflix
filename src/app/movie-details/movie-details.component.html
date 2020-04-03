@@ -70,7 +70,7 @@
                 <h3>Social - <span>Reviews: {{movieReviews['results'].length}}</span></h3>
                 <div class="social-container">
                     <h4>A review by {{movieReviews['results'][0].author}}</h4>
-                    <p>{{movieReviews['results'][0].content}}</p>
+                    <p>{{truncateFirstMovieReviewContent()}} <a href="">read the rest</a></p>
                 </div>
                 <div class="link">
                     <a href="">Read All Reviews</a>

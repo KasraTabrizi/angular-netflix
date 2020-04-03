@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MovieTrailerComponent } from './movie-trailer/movie-trailer.component';
-
+import * as _ from 'lodash';
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -42,6 +42,7 @@ export class MovieDetailsComponent implements OnInit {
 
     this._http.getMovieReviews(this.id).subscribe(data => {
       this.movieReviews = data;
+
       console.log(this.movieReviews);
     });
   }
@@ -53,6 +54,12 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  truncateFirstMovieReviewContent() {
+    return _.truncate(this.movieReviews['results'][0].content, {
+      'length': 500
+    });
   }
 
 
