@@ -13,6 +13,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MovieTrailerComponent } from './movie-details/movie-trailer/movie-trailer.component';
 import { SafePipe } from './safe.pipe';
 import { MyTimePipe } from './my-time.pipe';
+import * as _ from 'lodash';
 
 
 @NgModule({
