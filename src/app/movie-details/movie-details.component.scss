@@ -109,26 +109,6 @@
                     font-weight: 500;
                 }
 
-                .production-container{
-                    display: flex;
-                    //flex-wrap: wrap;
-                    //justify-content: space-around;
-                    align-items: center;
-
-                    .companies{
-                        padding-right: 15px;
-                        img{
-                            width: 70px;
-                        }
-
-                        span{
-                            border: 1px solid black;
-                            padding: 0.4em;
-                            color: black;
-                            font-weight: 700;
-                        }
-                    }
-                }
             }
         }
 

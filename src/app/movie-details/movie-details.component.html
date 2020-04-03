@@ -26,17 +26,6 @@
                 </div>
                 <h3>Overview</h3>
                 <p>{{movieDetails["overview"]}}</p>
-                <h3>Production Company</h3>
-                <div class="production-container">
-                    <div class="companies" *ngFor="let company of movieDetails['production_companies']">
-                        <ng-template [ngIf]="company['logo_path'] === null" [ngIfElse]="none">
-                            <span>{{company['name']}}</span>
-                        </ng-template>
-                        <ng-template #none>
-                            <img src="http://image.tmdb.org/t/p/original/{{company['logo_path']}}" alt="">
-                        </ng-template>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
