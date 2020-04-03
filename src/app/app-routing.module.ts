@@ -7,7 +7,7 @@ import { SearchDetailsComponent } from './search-details/search-details.componen
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'movie-details/:id', component: MovieDetailsComponent }
+  { path: 'movie-details/:id', component: MovieDetailsComponent },
   { path: 'search-details/:query', component: SearchDetailsComponent }
   // { path: '**', component: PageNotFoundComponent }
 ];
