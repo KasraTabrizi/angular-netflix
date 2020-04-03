@@ -17,6 +17,7 @@ export class MovieDetailsComponent implements OnInit {
   movieCredits: Object;
   movieVideos: Object;
   movieReviews: Object;
+  movieKeywords: Object;
 
   constructor(private _http: HttpService, private route: ActivatedRoute, public dialog: MatDialog) { }
 
@@ -42,8 +43,12 @@ export class MovieDetailsComponent implements OnInit {
 
     this._http.getMovieReviews(this.id).subscribe(data => {
       this.movieReviews = data;
-
       console.log(this.movieReviews);
+    });
+
+    this._http.getMovieKeywords(this.id).subscribe(data => {
+      this.movieKeywords = data;
+      console.log(this.movieKeywords);
     });
   }
 

@@ -32,4 +32,8 @@ export class HttpService {
   getMovieReviews(movieId) {
     return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${this.apiKey}&language=en-US`);
   }
+
+  getMovieKeywords(movieId) {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/keywords?api_key=${this.apiKey}&language=en-US`);
+  }
 }
