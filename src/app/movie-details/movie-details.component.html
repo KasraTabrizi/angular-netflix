@@ -51,8 +51,8 @@
                 <div class="top-cast-container">
                     <div class="top-cast" *ngFor="let cast of movieCredits['cast']; index as i">
                         <ng-template [ngIf]="i < 5">
-                            <div class="filtered-cast">
-                                <div class="profile-image">
+                            <div class="filtered-cast" [routerLink]="['/cast-details', cast['id']]">
+                                <div class=" profile-image">
                                     <img src="http://image.tmdb.org/t/p/w138_and_h175_face/{{cast['profile_path']}}"
                                         alt="">
                                 </div>
