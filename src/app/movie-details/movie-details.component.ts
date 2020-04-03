@@ -38,6 +38,8 @@ export class MovieDetailsComponent implements OnInit {
       this.movieVideos = data;
       console.log(this.movieVideos);
     });
+
+    this.
   }
 
   getImage() {
