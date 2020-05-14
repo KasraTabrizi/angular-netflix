@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
 
+## Screenhot
+
+<p align="center">
+    <img src="src/assets/img/database_dashboard.png" width="900" alt="database app dashboard">
+</p>
+
+<p align="center">
+    <img src="src/assets/img/database_moviedetails.png" width="900" alt="database app movie details">
+</p>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
